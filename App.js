@@ -1,9 +1,4 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View, Image, ScrollView, TextInput } from 'react-native';
-import MyComponent from './MyComponent';
-import InputExercise1 from './InputExercise1'
-import Cat from './Cat';
+
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import ScreenOne from './ScreenOne';
