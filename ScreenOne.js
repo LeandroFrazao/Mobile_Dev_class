@@ -28,6 +28,7 @@ export default function ScreenOne({navigation}){
                 }}
                 title = "Go to Screen Two"
             />
+            <br/>
             <View style={styles.container}>
 
                 {element}              
