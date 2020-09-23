@@ -30,10 +30,7 @@ export default function Cat(props) {
     return () => clearTimeout(timer);
   
     }, [timeon ? counter: null]); 
-    
      
-    
-       
     var btn2;
     if (isHungry){
         btn2= null;

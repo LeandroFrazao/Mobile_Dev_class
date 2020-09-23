@@ -4,8 +4,29 @@ import { StyleSheet, Text, View, Image, ScrollView, TextInput } from 'react-nati
 import MyComponent from './MyComponent';
 import InputExercise1 from './InputExercise1'
 import Cat from './Cat';
-var name = "Almicar";;
+import {createAppContainer} from 'react-navigation';
+import {createStackNavigator} from 'react-navigation-stack';
+import ScreenOne from './ScreenOne';
+import ScreenTwo from './ScreenTwo';
 
+
+const navigator = createStackNavigator(
+  {
+    One: ScreenOne,
+    Two: ScreenTwo,
+  },
+  {
+    initialRouteName:'One',
+    defaultNavigationOptions: {
+      title: 'App',
+    }
+  }
+  );
+  export default createAppContainer(navigator);
+
+
+
+/* //var name = "Almicar";;
 var user = {
   firstname: 'Almicar',
   lastname: 'Aponte'
@@ -22,35 +43,12 @@ var mycomp =   <MyComponent/>
 
 export default function App() {
   return (
-   /*
-   <ScrollView>
-      <Text>Some text</Text>
-      <View>
-        <Text>Some more text</Text>
-        <Image
-          source={{
-            uri: 'https://reactnative.dev/docs/assets/p_cat2.png',
-          }}
-          style={{ width: 200, height: 200 }}
-        />
-      </View>
-      <TextInput
-        style={{
-          height: 40,
-          borderColor: 'gray',
-          borderWidth: 1
-        }}
-        defaultValue="You can type in me"
-      />
-    </ScrollView>
-   */
+  
     <View style={styles.container}>
 
       {element}              
      
       {mycomp}
-      {//<Text>Open up App.js to start working on your app!</Text>
-      }
       <StatusBar style="auto" />
       <MyComponent name={formatName(user)}/>
       
@@ -75,3 +73,4 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+ */
